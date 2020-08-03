@@ -73,6 +73,7 @@
 		76335FF524A2062B005B7315 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		76335FF724A20631005B7315 /* ViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		76335FF824A20631005B7315 /* ViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		76A9E8FF24D8045C00F99D37 /* ViewController4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController4.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 			children = (
 				7606323124A5A3F500FC9C6F /* ViewController4.h */,
 				7606323224A5A3F500FC9C6F /* ViewController4.m */,
+				76A9E8FF24D8045C00F99D37 /* ViewController4.cpp */,
 			);
 			path = case4;
 			sourceTree = "<group>";

@@ -6,9 +6,13 @@
 //  Copyright © 2020年 xboker. All rights reserved.
 //
 
-#import "ViewController4.h"
 
+#import "ViewController4.h"
+typedef void(^Block)(void);
 @interface ViewController4 ()
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, copy)  Block  Block1;
+@property (nonatomic, copy)  Block  Block2;
 
 @end
 
@@ -16,18 +20,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ///产生循环引用
+    self.Block1 =    ^{
+        NSLog(@"name = %@", self.name);
+    };
+     self.Block1();
     
-    // Do any additional setup after loading the view.
+    
+    ///weak 修饰不产生循环引用
+    __weak typeof(self) weakSelf = self;
+    self.Block2 =    ^{
+        NSLog(@"name = %@", weakSelf.name);
+    };
+    self.Block2();
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
 }
-*/
 
 @end
